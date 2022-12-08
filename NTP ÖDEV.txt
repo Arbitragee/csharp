@@ -1,0 +1,29 @@
+class cylinder
+        {
+
+            private double a , b;  
+            public cylinder (double a, double b)
+            {
+                this.a = a;
+                this.b = b;
+                
+            }
+            public double calculate_area()
+            {
+                return (double)(2 * 3.14 * (a + b));
+
+
+            }
+            public double calculate_volume()
+            {
+                return (double)(3.14 * a * a * b);
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cylinder my_cylinder = new cylinder(Convert.ToDouble(textBox1.Text),Convert.ToDouble(textBox2.Text));
+            label1.Text = my_cylinder.calculate_area().ToString();
+            label2.Text = my_cylinder.calculate_volume().ToString();
+        }
